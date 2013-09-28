@@ -67,29 +67,29 @@ public class ModelsTest extends WithApplication {
 		assertEquals("Release next version", results.get(0).title);
 
 	}
-
-    @Test
-    public void fullTest() {
-        Yaml Tester= new Yaml();
-        Ebean.save((List) Tester.load("test-data.yml"));
-
-        // Count things
-        assertEquals(3, User.find.findRowCount());
-        assertEquals(7, Project.find.findRowCount());
-        assertEquals(5, Task.find.findRowCount());
-
-        // Try to authenticate as users
-        assertNotNull(User.authenticate("bob@example.com", "secret"));
-        assertNotNull(User.authenticate("jane@example.com", "secret"));
-        assertNull(User.authenticate("jeff@example.com", "badpassword"));
-        assertNull(User.authenticate("tom@example.com", "secret"));
-
-        // Find all Bob's projects
-        List<Project> bobsProjects = Project.findInvolving("bob@example.com");
-        assertEquals(5, bobsProjects.size());
-
-        // Find all Bob's todo tasks
-        List<Task> bobsTasks = Task.findTodoInvolving("bob@example.com");
-        assertEquals(4, bobsTasks.size());
-    }
+//
+//    @Test
+//    public void fullTest() {
+//        Yaml Tester= new Yaml();
+//        Ebean.save((List) Tester.load("test-data.yml"));
+//
+//        // Count things
+//        assertEquals(3, User.find.findRowCount());
+//        assertEquals(7, Project.find.findRowCount());
+//        assertEquals(5, Task.find.findRowCount());
+//
+//        // Try to authenticate as users
+//        assertNotNull(User.authenticate("bob@example.com", "secret"));
+//        assertNotNull(User.authenticate("jane@example.com", "secret"));
+//        assertNull(User.authenticate("jeff@example.com", "badpassword"));
+//        assertNull(User.authenticate("tom@example.com", "secret"));
+//
+//        // Find all Bob's projects
+//        List<Project> bobsProjects = Project.findInvolving("bob@example.com");
+//        assertEquals(5, bobsProjects.size());
+//
+//        // Find all Bob's todo tasks
+//        List<Task> bobsTasks = Task.findTodoInvolving("bob@example.com");
+//        assertEquals(4, bobsTasks.size());
+//    }
 }
