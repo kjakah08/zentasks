@@ -32,7 +32,6 @@ public class Task extends Model {
 		task.folder = folder;
 		task.save();
 		return task;
-
 	}
 
 }

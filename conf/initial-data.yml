@@ -15,7 +15,7 @@
     email:      jeff@example.com
     name:       Jeff
     password:   secret
-    
+
 # Projects
 
 - &play2 !!models.Project
@@ -63,7 +63,7 @@
     folder:     Personal
     members:
         - *jeff
-                
+
 # Task
 
 - !!models.Task

@@ -1,8 +1,9 @@
 package models;
 
-import java.util.*;
-import javax.persistence.*;
 import play.db.ebean.*;
+
+import javax.persistence.*;
+import java.util.*;
 
 @Entity
 public class Project extends Model {
